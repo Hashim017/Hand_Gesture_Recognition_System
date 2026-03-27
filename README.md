@@ -67,8 +67,4 @@ Hand_Gesture_Recognition_System/ ├── Collect_Images.py # Capture gesture i
 For issues or questions, please open a GitHub issue.
 
 **License:** MIT  
-
-**Project Type:** AI/ML Final Project
-
-**License:** MIT  
 **Project Type:** AI/ML Final Project
