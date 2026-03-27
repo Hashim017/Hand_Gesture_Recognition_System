@@ -1,29 +1,74 @@
-## Gesture Recognition Project
-A comprehensive gesture recognition system that uses computer vision and machine learning to recognize and execute predefined gestures for controlling media playback. The project leverages OpenCV for real-time image processing, MediaPipe for hand landmark detection, and machine learning techniques to classify gestures.
+# Hand Gesture Recognition System
 
-### Project Overview
-This project aims to provide a robust gesture recognition system capable of identifying hand gestures to control media playback functions such as play, pause, and skip. The system is designed to work with a standard webcam, capturing and processing live video feeds to recognize gestures in real time.
+An AI-powered computer vision application that recognizes and classifies hand gestures in real-time using machine learning. Built with Python, this system captures hand images, trains a classifier model, and enables gesture-based control for media operations.
 
-### Emulation Scope
-- **Gesture Recognition:** Accurately identify specific hand gestures corresponding to different media control actions.
-- **Media Control:** Execute predefined commands such as play, pause, and skip based on recognized gestures.
-- **Real-Time Processing:** Leverage real-time image processing to provide immediate feedback and action.
+## Features
+- Real-time hand gesture detection and recognition
+- Multi-gesture classification model
+- Webcam-based image capture and processing
+- Dataset creation and validation
+- Trained machine learning classifier
+- Media control through hand gestures
+- Camera compatibility checking
+- Dataset visualization and analysis
 
-### Technological Foundation
-- **OpenCV:** Utilized for accessing the webcam and processing video frames.
-- **MediaPipe:** Employed for detecting and tracking hand landmarks in real-time.
-- **Machine Learning:** Implemented using a Random Forest Classifier to classify hand gestures.
-- **Python:** The primary programming language used for integrating all components and developing the system.
+## Tech Stack
+- **Language:** Python (100%)
+- **Computer Vision:** OpenCV, MediaPipe
+- **Machine Learning:** Scikit-learn, NumPy
+- **Image Processing:** PIL, NumPy
+- **Data Handling:** Pickle serialization
 
-### Key Features
-- **Real-Time Gesture Recognition:** Achieve high accuracy in recognizing predefined hand gestures.
-- **Media Control Integration:** Seamlessly control media playback using recognized gestures.
-- **Cross-Platform Compatibility:** Ensure the system works on various operating systems.
+## Project Structure
+Hand_Gesture_Recognition_System/ ├── Collect_Images.py # Capture gesture images from webcam ├── Create_Dataset.py # Process images into training dataset ├── Train_Classifier.py # Train ML model on dataset ├── Inference_Classifier.py # Real-time gesture recognition ├── media_control.py # Control media with gestures ├── check_dataset.py # Analyze and visualize dataset ├── check_cameras.py # Test camera compatibility ├── model.p # Trained classifier model ├── data.pickle # Processed dataset └── README.md
 
-### Future Developments
-- **Enhanced Gesture Set:** Expand the set of recognizable gestures to include more media control actions.
-- **Improved Accuracy:** Implement advanced machine learning techniques such as Artificial Neural Networks (ANN) to enhance gesture recognition accuracy.
-- **Customizable Actions:** Allow users to customize gestures and corresponding actions for personalized control.
 
-### Conclusion
-The Gesture Recognition Project showcases the integration of computer vision, machine learning, and real-time processing to create an intuitive and efficient system for controlling media playback using hand gestures. This project serves as a foundation for future enhancements and applications in various fields requiring gesture-based interaction.
+## Quick Start
+1. Clone the repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run camera check: `python check_cameras.py`
+4. Collect gesture images: `python Collect_Images.py`
+5. Create dataset: `python Create_Dataset.py`
+6. Train model: `python Train_Classifier.py`
+7. Test recognition: `python Inference_Classifier.py`
+
+## Workflow
+
+### Phase 1: Data Collection
+- `Collect_Images.py` - Captures hand gesture images using webcam
+- Organized by gesture type for easy dataset management
+
+### Phase 2: Dataset Preparation
+- `Create_Dataset.py` - Processes images and extracts features
+- `check_dataset.py` - Validates and visualizes collected data
+
+### Phase 3: Model Training
+- `Train_Classifier.py` - Trains classification model
+- Generates `model.p` for inference
+
+### Phase 4: Real-time Recognition
+- `Inference_Classifier.py` - Live gesture detection and classification
+- `media_control.py` - Performs actions based on recognized gestures
+
+## Core Functionality
+- **Gesture Detection:** Real-time hand tracking using MediaPipe
+- **Classification:** ML-based gesture identification
+- **Media Control:** Play, pause, volume, and navigation
+- **Dataset Management:** Create, validate, and analyze training data
+- **Accuracy:** High-performance gesture recognition
+
+## System Requirements
+- Python 3.7+
+- Webcam
+- 4GB+ RAM
+- OpenCV compatible system
+
+## Getting Help
+For issues or questions, please open a GitHub issue.
+
+**License:** MIT  
+
+**Project Type:** AI/ML Final Project
+
+**License:** MIT  
+**Project Type:** AI/ML Final Project
